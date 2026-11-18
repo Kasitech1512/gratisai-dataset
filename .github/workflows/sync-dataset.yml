@@ -1,0 +1,52 @@
+name: Sync dataset
+
+# The site is the source of truth; this repository is a mirror. The job only
+# commits when the fetched files differ, so quiet days produce no churn.
+on:
+  schedule:
+    - cron: '17 15 * * *' # 01:17 AEST, well after the daily deploy
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch dataset
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 https://gratisai.com.au/dataset.json -o dataset.json
+          curl -fsSL --retry 3 https://gratisai.com.au/dataset.csv -o dataset.csv
+
+      - name: Validate
+        run: |
+          set -euo pipefail
+          node -e '
+            const data = require("./dataset.json");
+            if (!Array.isArray(data.tools) || data.tools.length === 0) {
+              throw new Error("dataset.json has no tools");
+            }
+            if (data.count !== data.tools.length) {
+              throw new Error(`count ${data.count} does not match ${data.tools.length} tools`);
+            }
+            if (data.license !== "CC BY 4.0") throw new Error("unexpected dataset licence");
+            console.log(`${data.count} tools, generated ${data.generated_at}`);
+          '
+          test "$(wc -l < dataset.csv)" -gt 10
+
+      - name: Commit if changed
+        run: |
+          set -euo pipefail
+          git config user.name "gratisai-dataset-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add dataset.json dataset.csv
+          if git diff --cached --quiet; then
+            echo "Dataset unchanged."
+            exit 0
+          fi
+          git commit -m "chore: sync dataset $(date -u +%F)"
+          git push
