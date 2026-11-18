@@ -6,7 +6,7 @@
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "GratisAI Index (gratisai.com.au)",
   "generated_at": "2026-11-18",
-  "count": 64,
+  "count": 66,
   "fields": {
     "pricing_model": "One of: 100% Free, Generous Free Tier, Limited Free Tier, Open Source, Free Trial. Definitions: https://gratisai.com.au/methodology",
     "pricing_reasoning": "Why the tool carries that label, with the published limits where they exist.",
@@ -2392,6 +2392,82 @@
         "Desktop only on Windows, macOS and Ubuntu",
         "Larger models need capable local hardware",
         "No hosted fallback if your machine is weak"
+      ],
+      "date_added": "2026-11-18",
+      "scope_caveat": null
+    },
+    {
+      "id": "otter-ai",
+      "name": "Otter.ai",
+      "tagline": "AI meeting notetaker with a free plan of 300 transcription minutes a month",
+      "description": "Otter records and transcribes Zoom, Microsoft Teams and Google Meet calls, identifies speakers and writes summaries, on web, desktop and mobile. The Basic plan is free with no card and publishes its limits rather than describing them as fair use: 300 transcription minutes a month, a 30-minute cap on each conversation, three audio or video imports for the life of the account, and the 25 most recent conversations kept open with older ones archived.",
+      "website": "https://otter.ai",
+      "category": "productivity",
+      "subcategories": [
+        "Meeting Notes",
+        "Transcription",
+        "Summaries",
+        "AI Chat"
+      ],
+      "pricing_model": "Generous Free Tier",
+      "pricing_reasoning": "Basic is $0 with no card and states its numbers: 300 transcription minutes a month, 30 minutes per conversation and three lifetime file imports, with 25 recent conversations available. Five hours of meetings a month is enough for real recurring work, not a demo, so it is Generous rather than Limited.",
+      "last_verified": "2026-11-18",
+      "sources": [
+        "https://otter.ai/pricing",
+        "https://help.otter.ai/hc/en-us/articles/360047538094-Conversation-import-and-app-limits-on-the-Basic-free-plan"
+      ],
+      "license": "Proprietary Free Tier",
+      "platforms": [
+        "Web",
+        "MacOS",
+        "Windows"
+      ],
+      "pros": [
+        "300 transcription minutes a month with no card",
+        "Joins Zoom, Teams and Meet automatically and identifies speakers",
+        "Live transcription, summaries and AI Chat are included on Basic"
+      ],
+      "cons": [
+        "Each conversation is capped at 30 transcribed minutes",
+        "Three audio or video imports in total, not per month",
+        "Only the 25 most recent conversations stay open; older ones are archived"
+      ],
+      "date_added": "2026-11-18",
+      "scope_caveat": null
+    },
+    {
+      "id": "fathom-ai",
+      "name": "Fathom",
+      "tagline": "AI meeting notetaker with unlimited free recordings, transcripts and storage",
+      "description": "Fathom records calls, transcribes them and writes an instant summary, with clips, playlists and search across your meeting history. The free plan is genuinely uncapped on the parts that cost money elsewhere: unlimited recordings, transcriptions, storage and downloads, in 38 languages, with bot capture or bot-free capture on Mac. What it limits is the AI layer — advanced summary templates cover the first five calls each month, and AI action items and follow-up emails are paid features.",
+      "website": "https://www.fathom.ai",
+      "category": "productivity",
+      "subcategories": [
+        "Meeting Notes",
+        "Transcription",
+        "Summaries",
+        "CRM Sync"
+      ],
+      "pricing_model": "Generous Free Tier",
+      "pricing_reasoning": "Free is $0 with no card and publishes no cap on recordings, transcripts, storage or downloads; the limits sit on the AI layer, where advanced summaries cover the first five calls each month and AI action items are paid-only. Unlimited recording at no cost earns the Generous label despite the summary cap.",
+      "last_verified": "2026-11-18",
+      "sources": [
+        "https://www.fathom.ai/pricing"
+      ],
+      "license": "Proprietary Free Tier",
+      "platforms": [
+        "Web",
+        "MacOS"
+      ],
+      "pros": [
+        "Recordings, transcripts, storage and downloads are unlimited on Free",
+        "Every call gets an instant AI summary at no cost",
+        "Clips, playlists and search across meetings are included"
+      ],
+      "cons": [
+        "Advanced summary templates are limited on the free plan",
+        "AI action items and follow-up emails require Premium",
+        "Bot-free capture is a Mac beta; other platforms use the meeting bot"
       ],
       "date_added": "2026-11-18",
       "scope_caveat": null
