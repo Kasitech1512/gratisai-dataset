@@ -28,7 +28,7 @@ See [LICENSE](LICENSE).
 | `website` | Official site |
 | `category` | One of: coding, appbuilder, design, content, audio, video3d, research, agents, productivity |
 | `subcategories` | Free-text tags |
-| `pricing_model` | `100% Free`, `Generous Free Tier`, `Limited Free Tier`, `Open Source`, `Free Trial` |
+| `pricing_model` | `100% Free`, `Generous Free Tier`, `Limited Free Tier`, `Open Source`, `Free Trial` — see the [comparisons](https://gratisai.com.au/compare/free-coding-agents) for worked examples |
 | `pricing_reasoning` | Why that label, with published limits where they exist |
 | `last_verified` | ISO date the entry was checked against the vendor page |
 | `sources` | Vendor pages the label is based on |
@@ -40,6 +40,17 @@ See [LICENSE](LICENSE).
 
 Label definitions and the verification rules are at
 [gratisai.com.au/methodology](https://gratisai.com.au/methodology).
+
+## Related reading
+
+- [Free AI tiers that died in 2026](https://gratisai.com.au/free-ai-tiers-that-died) —
+  every tier that ended, was replaced or was removed this year, with the vendor
+  source and the date it was checked.
+- [Cline vs Kilo Code vs OpenCode](https://gratisai.com.au/compare/free-coding-agents)
+- [Freebuff vs Bolt.new vs Scram](https://gratisai.com.au/compare/free-ai-app-builders)
+- [LibreChat vs Jan vs GPT4All](https://gratisai.com.au/compare/free-local-ai-chat)
+- [Free tier change alerts](https://gratisai.com.au/free-tier-changes) — one email
+  when a listed tool's free tier actually changes.
 
 ## What is deliberately not included
 
