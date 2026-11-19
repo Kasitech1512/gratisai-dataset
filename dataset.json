@@ -5,14 +5,18 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0/",
   "attribution": "GratisAI Index (gratisai.com.au)",
-  "generated_at": "2026-11-18",
+  "generated_at": "2026-11-19",
   "count": 66,
   "fields": {
     "pricing_model": "One of: 100% Free, Generous Free Tier, Limited Free Tier, Open Source, Free Trial. Definitions: https://gratisai.com.au/methodology",
     "pricing_reasoning": "Why the tool carries that label, with the published limits where they exist.",
     "last_verified": "ISO date the entry was last checked against the vendor pricing or docs page.",
     "sources": "Vendor pages the label was based on.",
-    "scope_caveat": "Present when the tool is adjacent to the directory scope; explains what it is not."
+    "scope_caveat": "Present when the tool is adjacent to the directory scope; explains what it is not.",
+    "free_tier_limits": "What the free tier actually includes, one claim per item, each backed by a source URL.",
+    "overage": "What happens when the free allowance runs out, in the vendor's own terms.",
+    "setup_notes": "The honest cost of getting started: hardware, keys, account requirements.",
+    "faq": "Questions the free path raises, answered only from the vendor pages. Empty until written."
   },
   "tools": [
     {
@@ -53,7 +57,29 @@
         "Free usage is metered in daily hours that vary by country"
       ],
       "date_added": "2026-10-15",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Free plan costs $0 and needs no credit card or API key.",
+        "It refills 30 hours of model usage every day, with unlimited messages per session.",
+        "Hours are weighted per model: an hour on a 3x model spends three hours of allowance.",
+        "The size of the daily allowance varies by country, because advertising funds it."
+      ],
+      "overage": "When the daily hours are spent, the paid plans add hours and model access, starting at $8/month.",
+      "setup_notes": "Install the CLI with `npm install -g freebuff`, or run the desktop app; the browser sandbox needs no local toolchain.",
+      "faq": [
+        {
+          "question": "Does Freebuff need a card or an API key?",
+          "answer": "No. The Free plan is $0 with no card and no key: advertising pays for the daily pool of usage hours."
+        },
+        {
+          "question": "What counts as an hour of usage?",
+          "answer": "Each model carries a multiplier. An hour on DeepSeek V4.1 Flash Slow costs one hour, while an hour on a 3x model costs three."
+        },
+        {
+          "question": "Why is my daily allowance different from someone else’s?",
+          "answer": "The vendor states that free hours depend on your country, since the allowance is funded by advertising revenue."
+        }
+      ]
     },
     {
       "id": "bolt-new",
@@ -87,7 +113,25 @@
         "Requires internet access to stream model tokens"
       ],
       "date_added": "2026-09-05",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Free is $0 forever with no card required.",
+        "Includes public and private projects, up to 3 collaborators, and hosting.",
+        "Token allowance is 300K per day and 1M per month.",
+        "Websites built on the Free plan carry Bolt branding; the upload limit is 10MB."
+      ],
+      "overage": "Past the daily and monthly token limits, the listed paid plan is Pro at $25/month with 10M tokens and a custom domain.",
+      "setup_notes": "Runs in the browser through StackBlitz WebContainers, so there is nothing to install — you need a Bolt account and a prompt.",
+      "faq": [
+        {
+          "question": "How many tokens does the Free plan include?",
+          "answer": "The Free plan states a 300K daily limit and 1M tokens per month, at no cost and with no card."
+        },
+        {
+          "question": "Can I work with other people on the Free plan?",
+          "answer": "Yes — Free includes public and private projects and up to 3 collaborators."
+        }
+      ]
     },
     {
       "id": "openhands",
@@ -126,7 +170,24 @@
         "Docker setup required for local containerized orchestration"
       ],
       "date_added": "2026-08-28",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The agent is MIT-licensed and free to self-host, with no vendor allowance and no card.",
+        "Self-hosted, it runs as a single user or a shared identity and calls your own LLM key.",
+        "The vendor’s cloud offers $10 of credit to start; the published team tier lists 10 users included with multi-user identity and RBAC."
+      ],
+      "overage": "Self-hosted, there is nothing to exceed: the only cost is your own model provider’s bill. Hosted teams move to the paid tier at $500/month.",
+      "setup_notes": "Self-host it yourself (Docker or the quickstart) and supply an LLM key from Anthropic, OpenAI or a local runtime.",
+      "faq": [
+        {
+          "question": "Is OpenHands free without a subscription?",
+          "answer": "The agent is MIT-licensed and free to self-host; you pay only for the model tokens your own key bills to."
+        },
+        {
+          "question": "Do I need to pay the vendor to run it locally?",
+          "answer": "No. The self-hosted path uses your own compute and your own LLM key, with no vendor allowance involved."
+        }
+      ]
     },
     {
       "id": "lovable-dev",
@@ -161,7 +222,25 @@
         "Monthly free credit limit applies to heavy iteration loops"
       ],
       "date_added": "2026-09-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Free is $0 and needs no credit card.",
+        "Builds are limited to 5 per day and 30 per month.",
+        "The plan includes 20 cloud credits and unlimited collaborators.",
+        "Credits are the unit Lovable uses to meter usage across the workspace."
+      ],
+      "overage": "Beyond the free credits, the next listed plan is Pro at $25/month with 100 monthly credits and credit rollover for one month.",
+      "setup_notes": "Browser-based: describe the app in the prompt box and Lovable builds it in the cloud, so nothing is installed locally.",
+      "faq": [
+        {
+          "question": "How many builds do I get for free?",
+          "answer": "The Free plan allows 5 builds per day and 30 per month, plus 20 cloud credits."
+        },
+        {
+          "question": "Does the Free plan need a card?",
+          "answer": "No — the vendor states no credit card is needed for the Free plan."
+        }
+      ]
     },
     {
       "id": "aider-chat",
@@ -200,7 +279,24 @@
         "Command-line interface only (no graphical drag-and-drop)"
       ],
       "date_added": "2026-07-22",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The tool itself is Apache-2.0 and free: no account, no subscription, no card.",
+        "There is no vendor allowance — usage is billed by whichever model provider you connect.",
+        "It works with almost any cloud model and with local models, so a local runtime can keep the model cost at zero."
+      ],
+      "overage": "Because there is no vendor quota, the only ceiling is your provider account: past its limits, requests stop until that account is topped up.",
+      "setup_notes": "Install the package, then set provider keys through flags, environment variables or a .env file — or point it at a local model.",
+      "faq": [
+        {
+          "question": "Is Aider free to use?",
+          "answer": "The software is Apache-2.0 and free with no account or card; you pay only your model provider for the tokens it sends."
+        },
+        {
+          "question": "How do I connect a model?",
+          "answer": "Set an API key for your provider via a command-line switch, an environment variable or a .env file — Aider connects to almost any cloud or local model."
+        }
+      ]
     },
     {
       "id": "gpt-engineer",
@@ -239,7 +335,24 @@
         "Repository is archived and no longer receives updates"
       ],
       "date_added": "2026-06-15",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "MIT-licensed CLI, installed and run by you: no account, no card, no vendor allowance.",
+        "Any cost comes from the model API key you supply.",
+        "The hosted gptengineer.app is a separate commercial product, not the free CLI."
+      ],
+      "overage": "No hosted tier to exceed: the ceiling is your model provider’s account, not a vendor quota.",
+      "setup_notes": "Install the Python package and set your own model API key; the docs cover Windows-specific setup separately.",
+      "faq": [
+        {
+          "question": "Is GPT Engineer free?",
+          "answer": "The CLI is MIT-licensed and free to install and run; you pay your model provider for the tokens it uses."
+        },
+        {
+          "question": "Is gptengineer.app the same thing?",
+          "answer": "No. The vendor describes it as a separate commercial project for automatic web-app generation."
+        }
+      ]
     },
     {
       "id": "dyad",
@@ -277,7 +390,25 @@
         "Smaller template ecosystem than cloud builders"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The free app runs locally with no account and no card.",
+        "It gives 20 agent messages a day.",
+        "The code is Apache-2.0 apart from the pro directory.",
+        "Dyad Pro starts at $20/month."
+      ],
+      "overage": "Past the 20 daily agent messages, Pro at $20/month unlocks the full Pro Agent mode.",
+      "setup_notes": "Download the desktop app and bring your own model access; because it runs locally, your code and keys stay on your machine.",
+      "faq": [
+        {
+          "question": "What do I get for free in Dyad?",
+          "answer": "The local app with 20 agent messages a day, no account required and no card."
+        },
+        {
+          "question": "Do I need to send my code anywhere?",
+          "answer": "No — Dyad runs locally, which the vendor lists as its privacy and no-lock-in advantage."
+        }
+      ]
     },
     {
       "id": "onlook",
@@ -316,7 +447,24 @@
         "Best suited to React projects only"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The editor is Apache-2.0 and, per the vendor FAQ, can be self-hosted for free from GitHub.",
+        "The hosted cloud is quoted per team and publishes no free allowance.",
+        "It works with the Claude Code or ChatGPT/Codex account you already have, so no extra model subscription is required."
+      ],
+      "overage": "Self-hosted, there is nothing to exceed; the hosted cloud is a sales-quoted plan with no published free tier.",
+      "setup_notes": "Either self-host from GitHub or use the hosted editor; you connect an existing Claude Code or ChatGPT/Codex account for the agent work.",
+      "faq": [
+        {
+          "question": "Is there a free version of Onlook?",
+          "answer": "Yes — the vendor’s FAQ says Onlook can be self-hosted for free from its GitHub repository."
+        },
+        {
+          "question": "Do I need a separate AI subscription?",
+          "answer": "No. You connect the Claude Code or ChatGPT/Codex account you already have, and that agent does the work in your project."
+        }
+      ]
     },
     {
       "id": "ollama",
@@ -356,7 +504,24 @@
         "Requires substantial unified memory for 70B parameter models"
       ],
       "date_added": "2026-08-15",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Running models locally is free: no subscription, no account, no card.",
+        "The cloud tier is pay as you go at $0 with no service fees, and its entry level lists 3 concurrent requests.",
+        "The Pro and Max cloud plans are $20/month and $100/month respectively; a yearly option bills the Pro plan at $200/year."
+      ],
+      "overage": "There is nothing to exceed locally. In the cloud you pay per token used, so cost scales with what you send rather than with a plan limit.",
+      "setup_notes": "Download for macOS or Windows, or run the install script on Linux; local models need enough unified memory for the size you choose.",
+      "faq": [
+        {
+          "question": "Can I use Ollama without paying anything?",
+          "answer": "Yes. Local inference runs on your own hardware with no subscription and no account; the cloud is optional and metered per token."
+        },
+        {
+          "question": "How many requests does the free cloud entry allow?",
+          "answer": "The published pay-as-you-go entry lists 3 concurrent requests and no service fees."
+        }
+      ]
     },
     {
       "id": "v0-dev",
@@ -389,7 +554,24 @@
         "Rate-limited on complex multi-page iterations on free plan"
       ],
       "date_added": "2026-07-20",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "New users get $5 of one-time credits and 7 messages a day.",
+        "No credit card is required to start.",
+        "Included monthly usage on a paid plan is drawn from that plan’s credits."
+      ],
+      "overage": "Once the one-time credits and the daily messages are gone, the listed paid plan is Plus at $30 per user per month, which includes $30 of credits.",
+      "setup_notes": "Browser-based on Vercel: generate components and apps from prompts, with no local setup needed.",
+      "faq": [
+        {
+          "question": "What do new accounts get for free?",
+          "answer": "$5 of one-time credits plus 7 messages a day, with no card required."
+        },
+        {
+          "question": "What happens when my free credits run out?",
+          "answer": "Usage then comes from a paid plan — Plus is $30 per user per month and includes $30 of credits — or from purchased on-demand credits."
+        }
+      ]
     },
     {
       "id": "deepseek-chat",
@@ -424,7 +606,24 @@
         "Occasional peak-hour server queue during major releases"
       ],
       "date_added": "2026-09-01",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The consumer chat is free to use with no paid plan and no card.",
+        "The vendor publishes no usage cap for the free chat.",
+        "API access is a separate, metered product billed per million tokens."
+      ],
+      "overage": "For the chat there is no published ceiling to hit. The API is billed by token, with peak-hour pricing stated in the vendor’s docs.",
+      "setup_notes": "Sign in to the web chat — nothing to install. API use needs a key from the vendor’s developer platform.",
+      "faq": [
+        {
+          "question": "Is DeepSeek’s chat genuinely free?",
+          "answer": "Yes — the chat has no paid plan and no card requirement, and the vendor publishes no usage cap for it."
+        },
+        {
+          "question": "Do I pay anything to use the API?",
+          "answer": "The API is a separate product billed per token; the free chat and the paid API are not the same thing."
+        }
+      ]
     },
     {
       "id": "continue-dev",
@@ -460,7 +659,24 @@
         "Requires configuring model endpoints for best performance"
       ],
       "date_added": "2026-06-11",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The extension is Apache-2.0 and free to install and run.",
+        "You point it at your own model or your own provider keys, so there is no vendor allowance.",
+        "The vendor’s hosted pricing lists paid per-token plans only — there is no hosted free tier to rely on."
+      ],
+      "overage": "Nothing vendor-side to exceed: the ceiling is whatever your own provider account allows, or what your local hardware can run.",
+      "setup_notes": "Install the VS Code or JetBrains extension, then configure a model — either cloud keys of your own or a local runtime.",
+      "faq": [
+        {
+          "question": "Is Continue free?",
+          "answer": "The extension is Apache-2.0 and free; model usage is billed by whichever provider you connect, or costs nothing if you run models locally."
+        },
+        {
+          "question": "Is there a free hosted tier?",
+          "answer": "The vendor’s hosted pricing lists paid per-token plans only, so the dependable free path is your own keys or local models."
+        }
+      ]
     },
     {
       "id": "lm-studio",
@@ -495,7 +711,24 @@
         "Core application is closed-source freeware, though model weights are OSS"
       ],
       "date_added": "2026-08-01",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The desktop app is free and runs local models through llama.cpp and MLX with no card.",
+        "Local inference has no usage cap.",
+        "The Free plan also includes the Bionic Agent and local model support; paid tiers add cloud models."
+      ],
+      "overage": "There is no cap locally. Cloud model access sits on the paid tiers, which start at $20/month.",
+      "setup_notes": "Download the desktop app and pull a model — it runs on your own machine, so no account or key is needed for local use.",
+      "faq": [
+        {
+          "question": "Is LM Studio free?",
+          "answer": "Yes — the desktop app is free, with no card and no usage cap for local inference."
+        },
+        {
+          "question": "What do the paid plans add?",
+          "answer": "Cloud-hosted open-source models and higher usage limits; paid tiers start at $20/month and everything in Free stays included."
+        }
+      ]
     },
     {
       "id": "codeium",
@@ -530,7 +763,24 @@
         "Free plan restricts model choice and caps agent usage"
       ],
       "date_added": "2026-05-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Free plan is $0 and includes unlimited tab completions.",
+        "Its agent usage is described as a light quota with limited model access.",
+        "The vendor does not publish the free agent numbers, so the allowance cannot be planned around."
+      ],
+      "overage": "Paid plans carry a usage allowance that refreshes daily and weekly; Pro is $20/month.",
+      "setup_notes": "Install the editor extension and sign in; tab completion works immediately, while agent features draw on the plan’s quota.",
+      "faq": [
+        {
+          "question": "Does the free plan include unlimited completions?",
+          "answer": "Yes — unlimited tab completions are included; the agent quota is separate and described only as light."
+        },
+        {
+          "question": "How is agent usage metered?",
+          "answer": "The vendor says each paid plan comes with a usage allowance that refreshes on a daily and weekly basis."
+        }
+      ]
     },
     {
       "id": "antigravity",
@@ -572,7 +822,24 @@
         "No bring-your-own-key option for extra quota"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The individual plan is $0 with no card and includes unlimited tab completions.",
+        "The agent quota is described as meaningful and refreshed weekly, with no figure published.",
+        "Plans on the pricing page apply to personal Google Accounts; Workspace plans do not include Antigravity plan limits."
+      ],
+      "overage": "Rate limits and model availability differ by Google AI plan, so the paid path is a Google AI subscription or pay-as-you-go with your own Cloud project.",
+      "setup_notes": "Install the editor and sign in with a personal Google Account — a Workspace account does not carry the plan on the pricing page.",
+      "faq": [
+        {
+          "question": "Is Antigravity free to use?",
+          "answer": "The individual plan is $0 with no card and unlimited tab completions; agent requests are limited by a weekly quota the vendor does not quantify."
+        },
+        {
+          "question": "Can I use my work Google account?",
+          "answer": "The plans on the pricing page apply to personal Google Accounts; Google Workspace plans do not include Antigravity plans or their rate limits."
+        }
+      ]
     },
     {
       "id": "goose",
@@ -611,7 +878,24 @@
         "Requires a model provider or local runtime"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The local agent is Apache-2.0 and free, with no card.",
+        "It has no allowance of its own — you fund it with provider credits or a free model tier.",
+        "Because it runs locally, your code and prompts stay on your machine."
+      ],
+      "overage": "The only limit is the model provider you connect: past that account’s quota, requests stop until it is topped up or switched.",
+      "setup_notes": "Install the CLI or desktop app, then connect a model provider — bring your own key, or point it at a local runtime.",
+      "faq": [
+        {
+          "question": "Is Goose free?",
+          "answer": "The agent is Apache-2.0 and free with no card; model usage is billed by whichever provider you connect."
+        },
+        {
+          "question": "Does it need an API key?",
+          "answer": "It needs a model to talk to — your own provider key or a local runtime — but there is no vendor account or allowance involved."
+        }
+      ]
     },
     {
       "id": "comfyui",
@@ -648,7 +932,24 @@
         "Steeper learning curve for node-based graph composition"
       ],
       "date_added": "2026-07-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Local graph execution is fully open-source and free, with no card.",
+        "Credits apply only to Partner Nodes (calls to closed-source models) and Cloud billing features.",
+        "No account or subscription is needed to run the local engine."
+      ],
+      "overage": "There is no local quota. Partner Nodes and Cloud billing are the paid surfaces, metered in credits you buy.",
+      "setup_notes": "Install locally on your own GPU; models are downloaded separately, and the portable build avoids a manual Python setup.",
+      "faq": [
+        {
+          "question": "Is ComfyUI free?",
+          "answer": "Yes — it is GPL-3.0 and free for local graph execution; credits only apply to Partner Nodes and Cloud features."
+        },
+        {
+          "question": "When would I pay anything?",
+          "answer": "Only when you call closed-source models through Partner Nodes, or use Cloud billing features."
+        }
+      ]
     },
     {
       "id": "recraft-ai",
@@ -684,7 +985,25 @@
         "Free-tier images are public and non-commercial; credits are limited"
       ],
       "date_added": "2026-08-20",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Free plan needs no credit card.",
+        "It allows up to 30 generations a day on credits that reset daily.",
+        "You can upload up to 3 images a day, and each prompt produces up to 2 images.",
+        "Free output is for non-commercial use."
+      ],
+      "overage": "Credit top-ups are available only on paid plans, and unused subscription credits do not roll over into the next cycle.",
+      "setup_notes": "Browser-based: create a free account and generate images and vectors directly, with no install.",
+      "faq": [
+        {
+          "question": "How much can I generate for free?",
+          "answer": "Up to 30 generations a day with daily-resetting credits, 3 uploads a day and 2 images per prompt, for non-commercial use."
+        },
+        {
+          "question": "Can I top up credits on the free plan?",
+          "answer": "No — credit top-ups are only available on paid plans."
+        }
+      ]
     },
     {
       "id": "krita-ai-diffusion",
@@ -719,7 +1038,24 @@
         "Requires pre-installed Krita and a local GPU server"
       ],
       "date_added": "2026-06-25",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The plugin is GPL-3.0 and free, with no hosted tier, no allowance and no card.",
+        "It runs locally on your own GPU through a ComfyUI backend.",
+        "Because inference is local, there is no per-image cost."
+      ],
+      "overage": "There is nothing to exceed — the only constraint is your own hardware, which sets how large a generation you can run.",
+      "setup_notes": "Install Krita, add the plugin, and connect a local ComfyUI instance; a GPU is required for practical speeds.",
+      "faq": [
+        {
+          "question": "Is Krita AI Diffusion free?",
+          "answer": "Yes — it is GPL-3.0, runs on your own GPU and has no hosted tier or card requirement."
+        },
+        {
+          "question": "Do I need ComfyUI?",
+          "answer": "Yes — the plugin uses a local ComfyUI backend to run the models."
+        }
+      ]
     },
     {
       "id": "invokeai",
@@ -758,7 +1094,24 @@
         "Initial model setup takes time"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The application is Apache-2.0 and free to self-host on your own GPU or Apple Silicon.",
+        "There is no paid tier and no card.",
+        "Hosted GPU access, if you want it, comes from third parties rather than the vendor."
+      ],
+      "overage": "Nothing vendor-side to exceed; the practical ceiling is your own GPU’s memory.",
+      "setup_notes": "Download for Windows (Windows 10 or later, NVIDIA or AMD GPU), macOS or Linux; the installer needs a compatible GPU.",
+      "faq": [
+        {
+          "question": "Is InvokeAI free?",
+          "answer": "Yes — it is Apache-2.0, self-hosted on your own hardware, with no paid tier and no card."
+        },
+        {
+          "question": "What hardware does it need?",
+          "answer": "The Windows and Linux downloads require an NVIDIA or AMD GPU; macOS builds run on Apple Silicon."
+        }
+      ]
     },
     {
       "id": "upscayl",
@@ -794,7 +1147,24 @@
         "GPU recommended for large batches"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The desktop app is free, open-source and local, with no limits and no card.",
+        "The optional cloud service gives a free trial of 10 credits.",
+        "Cloud plans are sold in credit bundles, from 100 to 5,000 credits a month."
+      ],
+      "overage": "Cloud credits run out rather than overage: the paid bundles start at $24.99 per 300 credits, billed monthly or annually.",
+      "setup_notes": "Download the desktop app for local upscaling; the cloud trial requires logging in and filling out a short application.",
+      "faq": [
+        {
+          "question": "Is Upscayl free?",
+          "answer": "Yes — the desktop app is free, open-source and runs locally with no limits or card."
+        },
+        {
+          "question": "What does the cloud trial include?",
+          "answer": "A free trial with 10 credits, after logging in and applying for it."
+        }
+      ]
     },
     {
       "id": "claude-ai",
@@ -829,7 +1199,25 @@
         "Strict message caps per 4-hour window on free accounts"
       ],
       "date_added": "2026-07-01",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Free plan is $0 and needs no card.",
+        "It includes Projects, up to 5.",
+        "Usage is limited on a rolling 5-hour window and again on a weekly basis.",
+        "The vendor does not publish a message count, because how fast you hit a limit depends on the model, chat length and file size."
+      ],
+      "overage": "Past the limits you wait for the window to reset; Pro raises them, and verified accounts are documented as having no 5-hour limit.",
+      "setup_notes": "Sign in at claude.ai in the browser — no install, no key, no card.",
+      "faq": [
+        {
+          "question": "How many messages do I get on the free plan?",
+          "answer": "Anthropic publishes no message count: the limit depends on the model you use, how long your chats are and how large your files are, and resets on 5-hour and weekly windows."
+        },
+        {
+          "question": "What are Projects on the free plan?",
+          "answer": "The Free plan includes Projects, up to 5 of them."
+        }
+      ]
     },
     {
       "id": "notebooklm",
@@ -862,7 +1250,25 @@
         "Limited to analyzing uploaded sources rather than open web search"
       ],
       "date_added": "2026-08-10",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Free with a Google account and no card.",
+        "100 notebooks, each holding up to 50 sources.",
+        "50 chats a day, 3 audio overviews a day and 10 reports a day.",
+        "A qualifying Workspace or Workspace for Education licence also unlocks it."
+      ],
+      "overage": "The daily allowances reset each day; the paid path is a Google AI plan that raises the notebook and source limits.",
+      "setup_notes": "Sign in with a Gmail account at no charge — sources are PDFs, sites, videos and pasted text, and nothing is installed.",
+      "faq": [
+        {
+          "question": "How many sources can one notebook hold?",
+          "answer": "Up to 50 sources per notebook, across 100 notebooks on the free plan."
+        },
+        {
+          "question": "Are the daily limits per notebook or per account?",
+          "answer": "They are account limits: 50 chats, 3 audio overviews and 10 reports a day across your notebooks."
+        }
+      ]
     },
     {
       "id": "gemini-flash",
@@ -898,7 +1304,24 @@
         "Pro and flagship models are paid only"
       ],
       "date_added": "2026-06-05",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The API free tier is priced at free of charge and needs only a Google Cloud project.",
+        "Per-model daily quotas are shown inside AI Studio rather than on the pricing page.",
+        "No card is required for the free tier."
+      ],
+      "overage": "Past the free tier’s daily quotas, requests fail for the day; a paid Cloud billing account raises them.",
+      "setup_notes": "Create a project in Google AI Studio, generate a key, then call the API — the quotas for your model are visible in AI Studio.",
+      "faq": [
+        {
+          "question": "What are the free tier rate limits?",
+          "answer": "Google publishes per-model daily quotas inside AI Studio rather than on the pricing page, so the number depends on the model you call."
+        },
+        {
+          "question": "Is a credit card needed?",
+          "answer": "No — the free tier needs only a project; billing is a separate, optional upgrade."
+        }
+      ]
     },
     {
       "id": "chatgpt-free",
@@ -934,7 +1357,25 @@
         "Ads may appear on the free tier in some countries"
       ],
       "date_added": "2026-04-12",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The free account needs no card.",
+        "Everyday text chats are unlimited, subject to abuse safeguards.",
+        "It includes 500 MB of Library storage.",
+        "Media generation and research tools have their own separate limits."
+      ],
+      "overage": "There is no paid requirement for text chat; heavier media and research use is what the paid tiers exist for.",
+      "setup_notes": "Sign in at chatgpt.com in the browser — no install, no key, no card.",
+      "faq": [
+        {
+          "question": "Is ChatGPT free unlimited?",
+          "answer": "Everyday text chats are unlimited under the vendor’s abuse safeguards; media and research features have separate limits."
+        },
+        {
+          "question": "How much storage comes with the free account?",
+          "answer": "500 MB of Library storage."
+        }
+      ]
     },
     {
       "id": "librechat",
@@ -974,7 +1415,24 @@
         "Multi-user setups need a Docker deployment"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "MIT-licensed and self-hosted: no subscription, no card, no per-seat fee.",
+        "It ships without API keys, so you add your own provider key or a local model.",
+        "A free public demo runs at chat.librechat.ai for trying it before installing."
+      ],
+      "overage": "There is no vendor quota; the only cost is the model provider you connect, plus whatever your own server costs to run.",
+      "setup_notes": "Run it with Docker (about five minutes via the quickstart) or npm, or deploy it to a server; it serves on port 3080 locally.",
+      "faq": [
+        {
+          "question": "Is LibreChat free?",
+          "answer": "Yes — it is MIT-licensed and self-hosted, with no subscription; model calls are billed by the provider whose key you add."
+        },
+        {
+          "question": "Do I need an API key to start?",
+          "answer": "To chat, yes — it ships with no key of its own; the public demo lets you try it before installing anything."
+        }
+      ]
     },
     {
       "id": "open-notebook",
@@ -1012,7 +1470,24 @@
         "Less polished than the hosted original"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "MIT-licensed and self-hosted in Docker: no card, no paid tier.",
+        "It needs your own model key or a local Ollama model.",
+        "There is no vendor allowance because there is no vendor-hosted service."
+      ],
+      "overage": "Nothing to exceed — model usage is billed by the provider you connect, or free if you run models locally.",
+      "setup_notes": "Run it in Docker, then configure models on the Models page — OpenAI, Anthropic, Gemini, Vertex AI, OpenRouter or local Ollama.",
+      "faq": [
+        {
+          "question": "Is Open Notebook free?",
+          "answer": "Yes — it is MIT-licensed and self-hosted, with no paid tier and no card."
+        },
+        {
+          "question": "Which models can it use?",
+          "answer": "OpenAI, Anthropic, Google Gemini, Vertex AI and OpenRouter, plus local models through Ollama."
+        }
+      ]
     },
     {
       "id": "kokoro-tts",
@@ -1049,7 +1524,24 @@
         "CLI / Python setup required for custom voice blending"
       ],
       "date_added": "2026-09-12",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The weights are Apache-2.0: an 82M-parameter model you run locally with no card.",
+        "Local inference has no quota and no per-character cost.",
+        "Hosted APIs for the same model bill around $0.06 per hour of audio and publish no free quota."
+      ],
+      "overage": "Nothing to exceed locally. Hosted providers meter per character or per hour, so cost scales with output rather than a plan.",
+      "setup_notes": "Install the package and run it on your own machine; the model is small enough for CPU or Apple Silicon.",
+      "faq": [
+        {
+          "question": "Is Kokoro TTS free?",
+          "answer": "Yes — the weights are Apache-2.0 and run locally with no card or quota."
+        },
+        {
+          "question": "What does hosted Kokoro cost?",
+          "answer": "Third-party APIs bill roughly $0.06 per hour of audio; the vendor’s model card notes 1,000 characters is about a minute of output."
+        }
+      ]
     },
     {
       "id": "openai-whisper",
@@ -1086,7 +1578,24 @@
         "Larger models require 4GB+ VRAM for real-time speeds"
       ],
       "date_added": "2026-03-10",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "MIT licence covers both the code and the weights.",
+        "It runs locally with no paid tier, no credits and no card.",
+        "Smaller models transcribe in real time on a CPU, so no GPU is required."
+      ],
+      "overage": "Nothing to exceed: local transcription is unmetered and there is no paid tier above it.",
+      "setup_notes": "Install the Python package and download a model size; on Windows the docs cover the Rust build dependency if pip complains.",
+      "faq": [
+        {
+          "question": "Is Whisper free?",
+          "answer": "Yes — code and weights are MIT-licensed and run locally, with no paid tier or card."
+        },
+        {
+          "question": "Do I need a GPU?",
+          "answer": "No — small models transcribe on CPU, though larger models are much faster with a GPU."
+        }
+      ]
     },
     {
       "id": "elevenlabs-free",
@@ -1122,7 +1631,25 @@
         "Free-plan audio is non-commercial and requires crediting ElevenLabs"
       ],
       "date_added": "2026-05-02",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Free plan is $0 and needs no card.",
+        "It gives 10,000 credits a month — about 10 minutes of speech.",
+        "It also includes 3 Studio projects.",
+        "Output on the Free plan carries no commercial licence."
+      ],
+      "overage": "Past the 10,000 monthly credits, the next tiers are Starter at $6 (30,000 credits) and Creator at $22 (121,000 credits).",
+      "setup_notes": "Browser-based: sign up, paste text and generate — no install; the API is available for other programs.",
+      "faq": [
+        {
+          "question": "How much speech does the free plan give?",
+          "answer": "10,000 credits a month, which the vendor equates to about 10 minutes of speech."
+        },
+        {
+          "question": "Can I use free output commercially?",
+          "answer": "No — the Free plan does not include a commercial licence."
+        }
+      ]
     },
     {
       "id": "suno-ai",
@@ -1157,7 +1684,24 @@
         "Free accounts have no monthly downloads and use the v6-mini model"
       ],
       "date_added": "2026-06-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Free plan is $0 forever with no card.",
+        "It gives 50 credits a day, which the vendor says is enough for about 10 songs, and the credits replenish daily.",
+        "Free output cannot be downloaded for commercial use — commercial rights need a paid plan."
+      ],
+      "overage": "There is no overage charge: the daily credits simply replenish the next day. Pro adds 2,500 credits each month.",
+      "setup_notes": "Use it in the browser: describe a song and Suno generates it in the cloud, so nothing is installed.",
+      "faq": [
+        {
+          "question": "How many songs can I make for free?",
+          "answer": "50 credits a day, which the vendor describes as enough for about 10 songs, replenishing daily."
+        },
+        {
+          "question": "Do I own the songs I make on the free plan?",
+          "answer": "Commercial use rights come with a paid plan; the Free plan does not include them."
+        }
+      ]
     },
     {
       "id": "piper-tts",
@@ -1196,7 +1740,24 @@
         "Voice quality below large cloud models"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The engine is GPL-3.0 and free to install and run.",
+        "It synthesises offline on CPU with no card and no paid tier.",
+        "Rights to individual voice models vary by model card, so check the voice you ship."
+      ],
+      "overage": "Nothing to exceed: local synthesis is unmetered, and there is no paid tier above it.",
+      "setup_notes": "Install with `pip install piper-tts`, then download a voice model; it runs offline with no account.",
+      "faq": [
+        {
+          "question": "Is Piper free?",
+          "answer": "Yes — the engine is GPL-3.0 and installs with pip; it runs offline on CPU with no card or paid tier."
+        },
+        {
+          "question": "Can I use the voices commercially?",
+          "answer": "That depends on the individual voice model: the project points to each model’s licensing, so check the voice you use."
+        }
+      ]
     },
     {
       "id": "f5-tts",
@@ -1234,7 +1795,24 @@
         "Only English and Chinese are well supported"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The code is MIT-licensed and runs on your own GPU with no card.",
+        "The pretrained models are released under CC-BY-NC, so the weights themselves are non-commercial.",
+        "There is no hosted tier and no credits."
+      ],
+      "overage": "No hosted tier, so nothing to exceed — the CC-BY-NC weights limit commercial use instead of a quota.",
+      "setup_notes": "Install the Python package with a matching PyTorch CUDA build, then download a checkpoint; a GPU is required.",
+      "faq": [
+        {
+          "question": "Is F5-TTS free?",
+          "answer": "Yes — the code is MIT and runs locally with no card, though the pretrained models are CC-BY-NC, which restricts commercial use."
+        },
+        {
+          "question": "Do I need a GPU?",
+          "answer": "Yes — the project’s install instructions target CUDA builds of PyTorch."
+        }
+      ]
     },
     {
       "id": "ace-step",
@@ -1273,7 +1851,24 @@
         "Quality varies by genre and prompt"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Apache-2.0 code with weights published on Hugging Face.",
+        "Self-hosted through pip, Docker or ComfyUI on your own GPU, with no card.",
+        "There is no hosted tier and no vendor allowance."
+      ],
+      "overage": "No vendor allowance exists, so the only ceiling is your own GPU.",
+      "setup_notes": "Install the package or run the ComfyUI node, then download the weights; an A100-class GPU generates minutes of music in seconds.",
+      "faq": [
+        {
+          "question": "Is ACE-Step free?",
+          "answer": "Yes — it is Apache-2.0 and self-hosted on your own GPU, with no hosted tier or card."
+        },
+        {
+          "question": "What hardware does it need?",
+          "answer": "A GPU: the vendor reports generating up to 4 minutes of music in 20 seconds on an A100, with consumer cards able to run it too."
+        }
+      ]
     },
     {
       "id": "tripo-3d",
@@ -1307,7 +1902,25 @@
         "Complex topology requires manual retopology for games"
       ],
       "date_added": "2026-07-28",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Free plan needs no credit card.",
+        "It gives 200 credits a month, which the directory estimates at about 13 models.",
+        "Downloads are limited to 15 a month.",
+        "Free output is public and non-commercial."
+      ],
+      "overage": "Past the monthly credits and downloads, the paid plans raise both; the free tier does not roll credits over.",
+      "setup_notes": "Browser-based: upload or describe a subject and export a mesh — no install, though exports need an account.",
+      "faq": [
+        {
+          "question": "How many 3D models can I make for free?",
+          "answer": "The Free plan gives 200 credits a month — roughly 13 models — with 15 downloads a month."
+        },
+        {
+          "question": "Can I use free models commercially?",
+          "answer": "No — free output is public and non-commercial."
+        }
+      ]
     },
     {
       "id": "wan-2-2",
@@ -1345,7 +1958,24 @@
         "Setup is technical compared with hosted tools"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Apache-2.0 code and weights for the 5B and 14B video models.",
+        "Self-hosted on your own GPU, with no hosted tier, credits or card.",
+        "Generates 720P at 24fps and also supports image-to-video."
+      ],
+      "overage": "There is no vendor quota; the ceiling is your own GPU memory — the 14B checkpoint needs large or multi-GPU memory.",
+      "setup_notes": "Download the weights and run them locally; consumer-grade cards can run the smaller model, while the 14B needs more memory.",
+      "faq": [
+        {
+          "question": "Is Wan 2.2 free?",
+          "answer": "Yes — code and weights are Apache-2.0 and run on your own hardware with no card."
+        },
+        {
+          "question": "What resolution does it produce?",
+          "answer": "720P at 24fps, for both text-to-video and image-to-video."
+        }
+      ]
     },
     {
       "id": "ltx-video",
@@ -1382,7 +2012,24 @@
         "Clip length and resolution are limited"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The repository and weights are Apache-2.0 and run locally on an NVIDIA GPU.",
+        "There is no hosted tier or vendor allowance for the open model.",
+        "The separate LTX Studio app gives 800 one-time credits for its hosted generation."
+      ],
+      "overage": "Locally there is nothing to exceed; in LTX Studio the one-time 800 credits are finite and then must be bought.",
+      "setup_notes": "Install the inference package and download the weights, or use the online demo; a modern NVIDIA GPU is required for local runs.",
+      "faq": [
+        {
+          "question": "Is LTX-Video free?",
+          "answer": "Yes — the model is Apache-2.0 and runs locally with no vendor allowance; the hosted LTX Studio app separately offers 800 one-time credits."
+        },
+        {
+          "question": "Can it run on a consumer GPU?",
+          "answer": "The vendor targets local NVIDIA GPU inference and publishes a quickstart plus an online demo for smaller machines."
+        }
+      ]
     },
     {
       "id": "hunyuan3d",
@@ -1419,7 +2066,24 @@
         "Significant GPU memory and setup time"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Weights are released under Tencent’s community licence and run self-hosted with no card.",
+        "The licence is unavailable in the EU, UK and South Korea.",
+        "A separate licence is required above 1 million monthly users."
+      ],
+      "overage": "There is no vendor allowance; the constraint is the licence itself, which changes above a million monthly users.",
+      "setup_notes": "Download the weights and run locally, with community Windows installers and ComfyUI wrappers available; a capable GPU is required.",
+      "faq": [
+        {
+          "question": "Is Hunyuan3D free?",
+          "answer": "It is free to self-host under Tencent’s community licence, but that licence is unavailable in the EU, UK and South Korea."
+        },
+        {
+          "question": "When do I need a commercial licence?",
+          "answer": "Above 1 million monthly users, the vendor requires a separate licence."
+        }
+      ]
     },
     {
       "id": "meshy",
@@ -1455,7 +2119,25 @@
         "Free output is CC BY 4.0 and requires attribution"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Free plan needs no card.",
+        "It gives 100 credits a month, which the directory estimates at up to 10 assets.",
+        "Downloads are limited to 10 a month, and only for Meshy 6 Lite.",
+        "Free output is released under CC BY 4.0."
+      ],
+      "overage": "Past the monthly credits and downloads, the paid plans raise both; the free tier does not accumulate unused credits.",
+      "setup_notes": "Browser-based: prompt or upload an image and export the mesh — no install, though downloads require an account.",
+      "faq": [
+        {
+          "question": "How many assets can I download for free?",
+          "answer": "10 downloads a month on the Free plan, limited to Meshy 6 Lite, from a pool of 100 monthly credits."
+        },
+        {
+          "question": "What licence covers free output?",
+          "answer": "CC BY 4.0, so attribution is required."
+        }
+      ]
     },
     {
       "id": "perplexity-ai",
@@ -1490,7 +2172,25 @@
         "Pro searches (deep research) limited on free plan"
       ],
       "date_added": "2026-05-15",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Free needs no card and covers basic search.",
+        "It includes 3 Pro searches a day and 1 research query a month.",
+        "Basic searches are effectively unlimited.",
+        "The free tier includes access to the top AI models with limited weekly usage."
+      ],
+      "overage": "Past the daily Pro searches, the paid tiers (from $17/month billed annually) add expanded Computer access and bonus credits.",
+      "setup_notes": "Browser and mobile apps: search in the box — no install, no key, no card.",
+      "faq": [
+        {
+          "question": "How many Pro searches do I get for free?",
+          "answer": "3 Pro searches a day and 1 research query a month, with basic searches effectively unlimited."
+        },
+        {
+          "question": "Does the free plan need a card?",
+          "answer": "No — the free tier requires no card."
+        }
+      ]
     },
     {
       "id": "elicit-research",
@@ -1524,7 +2224,25 @@
         "Complex multi-column systematic synthesis consumes credits"
       ],
       "date_added": "2026-06-12",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Basic plan is free with no card.",
+        "It includes unlimited search across more than 138 million papers.",
+        "Summaries are unlimited.",
+        "Research reports are limited to 2 a month."
+      ],
+      "overage": "Past the two monthly reports, the paid plans add report volume and team features.",
+      "setup_notes": "Browser-based: sign in, search papers and extract data into a table — no install.",
+      "faq": [
+        {
+          "question": "Is Elicit free?",
+          "answer": "Yes — the Basic plan is free with no card: unlimited search and summaries across more than 138 million papers."
+        },
+        {
+          "question": "How many research reports can I run?",
+          "answer": "2 research reports a month on the free Basic plan."
+        }
+      ]
     },
     {
       "id": "open-webui",
@@ -1560,7 +2278,24 @@
         "Requires Docker setup to host locally"
       ],
       "date_added": "2026-07-08",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The BSD-3 community edition is free for unlimited users, with no card.",
+        "It needs your own server and your own model keys.",
+        "A branding clause applies at 50 or more users: deployments of 50 or fewer may fully rebrand."
+      ],
+      "overage": "There is no vendor allowance to exhaust — the cost is your own server and whatever your model provider charges.",
+      "setup_notes": "Run it with Docker or pip on your own hardware, then point it at OpenAI-compatible endpoints or a local runtime.",
+      "faq": [
+        {
+          "question": "Is Open WebUI free for a team?",
+          "answer": "The BSD-3 community edition is free with no user limit and no card; it runs on your own server with your own model keys."
+        },
+        {
+          "question": "Can I remove the branding?",
+          "answer": "Self-hosted deployments with 50 or fewer users may fully rebrand; above that, the licence’s branding clause applies."
+        }
+      ]
     },
     {
       "id": "semantic-scholar",
@@ -1596,7 +2331,24 @@
         "API rate limits apply without a key"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The site and the API are free, with no paid tier and no card.",
+        "Keyed API access is limited to 1 request per second.",
+        "The corpus covers 214 million papers."
+      ],
+      "overage": "There is no paid tier — heavy use is rate-limited rather than billed, so throttling is the ceiling.",
+      "setup_notes": "Use the site directly, or request a free API key and call the Academic Graph endpoints.",
+      "faq": [
+        {
+          "question": "Is the Semantic Scholar API free?",
+          "answer": "Yes — the API is free with a key; the limit is 1 request per second."
+        },
+        {
+          "question": "How large is the corpus?",
+          "answer": "About 214 million papers, covering authors, citations and venues."
+        }
+      ]
     },
     {
       "id": "consensus",
@@ -1631,7 +2383,24 @@
         "Full-text access still depends on publisher paywalls"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Free needs no card and gives unlimited paper searches.",
+        "It includes 10 Pro messages a month.",
+        "Also 3 deep reviews, 10 study snapshots and 30 API calls a month."
+      ],
+      "overage": "Beyond the monthly Pro messages and deep reviews, the paid plans raise each allowance.",
+      "setup_notes": "Browser-based: ask a research question and read the synthesised answers — no install.",
+      "faq": [
+        {
+          "question": "Are searches unlimited on the free plan?",
+          "answer": "Yes — paper searches are unlimited; the metered parts are 10 Pro messages and 3 deep reviews a month."
+        },
+        {
+          "question": "Is there an API on the free plan?",
+          "answer": "Yes, with 30 API calls a month."
+        }
+      ]
     },
     {
       "id": "n8n-community",
@@ -1667,7 +2436,24 @@
         "Fair-code license has restrictions on selling n8n as a hosted service"
       ],
       "date_added": "2026-08-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The self-hosted Community edition is free indefinitely, with no execution cap.",
+        "It runs under the Sustainable Use License, which permits internal business use.",
+        "The cloud free option is only a 14-day trial — the permanent free path is self-hosting."
+      ],
+      "overage": "Self-hosted has no execution quota to exceed; if you want managed hosting, that is where the paid cloud tiers start.",
+      "setup_notes": "Run it yourself with Docker or npm on your own server, then build workflows in the editor.",
+      "faq": [
+        {
+          "question": "Is n8n free forever?",
+          "answer": "The self-hosted Community edition is free indefinitely with no execution cap; only the cloud product is a 14-day trial."
+        },
+        {
+          "question": "Can I use the free edition at work?",
+          "answer": "The Sustainable Use License permits internal business use; it restricts reselling the software as a service."
+        }
+      ]
     },
     {
       "id": "flowise-ai",
@@ -1705,7 +2491,24 @@
         "Advanced production deployments require custom state management"
       ],
       "date_added": "2026-06-22",
-      "scope_caveat": "Scope note: the Flowise repository is archived, so the project is no longer actively developed. The entry is kept because self-hosting still works, but it is a removal candidate."
+      "scope_caveat": "Scope note: the Flowise repository is archived, so the project is no longer actively developed. The entry is kept because self-hosting still works, but it is a removal candidate.",
+      "free_tier_limits": [
+        "The core is Apache-2.0 and free to self-host on your own infrastructure and keys.",
+        "There is no hosted free allowance in the repository’s terms.",
+        "The repository states it has been archived, so no new development is expected."
+      ],
+      "overage": "Self-hosted with your own keys, so the ceiling is your provider’s quota and your own infrastructure.",
+      "setup_notes": "Run it with npx or Docker and connect your own model keys; hosting and inference cost are yours.",
+      "faq": [
+        {
+          "question": "Is Flowise free?",
+          "answer": "The core is Apache-2.0 and free to self-host with your own keys and infrastructure."
+        },
+        {
+          "question": "Is it still maintained?",
+          "answer": "The repository states it has been archived, so no new development is expected."
+        }
+      ]
     },
     {
       "id": "dify-ai",
@@ -1740,7 +2543,24 @@
         "Docker Compose deployment requires 4GB+ RAM on host"
       ],
       "date_added": "2026-07-19",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Community edition self-hosts free, with no licence required.",
+        "The cloud sandbox gives 200 message credits, 1 member, 5 apps and 5,000 API calls a month.",
+        "Message credits are consumed according to the model you call."
+      ],
+      "overage": "Past the sandbox allowance, the paid cloud plans start in the Professional tier; self-hosting stays free.",
+      "setup_notes": "Run the Community edition with Docker Compose on your own server, then add model provider keys.",
+      "faq": [
+        {
+          "question": "Is Dify free?",
+          "answer": "The Community edition self-hosts free with no licence; the vendor also runs a cloud sandbox with 200 message credits a month."
+        },
+        {
+          "question": "What does the cloud sandbox include?",
+          "answer": "200 message credits, 1 member, 5 apps and 5,000 API calls a month."
+        }
+      ]
     },
     {
       "id": "crewai",
@@ -1777,7 +2597,24 @@
         "Requires Python programming skills to configure"
       ],
       "date_added": "2026-05-24",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The framework is MIT-licensed and free to self-host with your own model keys.",
+        "The hosted AMP free tier allows 2 automations and 50 workflow executions a month.",
+        "The open-source framework has no execution limit of its own."
+      ],
+      "overage": "Past the hosted free tier’s 50 monthly executions, the paid AMP plans take over; self-hosted use is limited only by your own infrastructure.",
+      "setup_notes": "Install the Python package for the open-source framework, or sign up to the hosted AMP for the visual editor and GitHub integration.",
+      "faq": [
+        {
+          "question": "Is CrewAI free?",
+          "answer": "The framework is MIT and free to self-host; the hosted product’s free tier allows 2 automations and 50 executions a month."
+        },
+        {
+          "question": "Do I need the hosted product?",
+          "answer": "No — the open-source framework runs on your own infrastructure with your own model keys."
+        }
+      ]
     },
     {
       "id": "langflow",
@@ -1816,7 +2653,24 @@
         "Large flows need tuning for production scale"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "MIT-licensed visual builder with no pricing page.",
+        "It self-hosts or runs as a desktop app on your own compute and model keys.",
+        "There is no vendor allowance and no card involved."
+      ],
+      "overage": "There is no vendor allowance to exceed — your own compute and model provider set the limit.",
+      "setup_notes": "Run it with pip or Docker, or install the desktop app, then connect your model providers; every workflow can be exported as an API or JSON.",
+      "faq": [
+        {
+          "question": "Is Langflow free?",
+          "answer": "Yes — it is MIT-licensed and runs on your own compute with your own model keys, with no card involved."
+        },
+        {
+          "question": "Can I deploy what I build?",
+          "answer": "Yes — workflows deploy as an API or export as JSON for Python apps."
+        }
+      ]
     },
     {
       "id": "activepieces",
@@ -1855,7 +2709,24 @@
         "Fewer community templates than n8n"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Free forever with no card: 1,000 credits a month, unlimited flows and up to 5 users.",
+        "The core is MIT and can be self-hosted.",
+        "On Free, flows stay switched on, but runs past the quota do not go through until credits refresh."
+      ],
+      "overage": "Past the 1,000 monthly credits, runs wait for the next refresh; on Plus and Team the extra runs bill at $0.007 per credit.",
+      "setup_notes": "Use the hosted app, or self-host the MIT core with your own infrastructure; enterprise features need an Activepieces licence.",
+      "faq": [
+        {
+          "question": "What does the free plan include?",
+          "answer": "1,000 credits a month, unlimited flows and up to 5 users, with no card required."
+        },
+        {
+          "question": "What happens when the credits run out?",
+          "answer": "On Free, runs beyond the quota do not go through until credits refresh; paid plans keep running and bill the extra at $0.007 per credit."
+        }
+      ]
     },
     {
       "id": "appflowy",
@@ -1894,7 +2765,25 @@
         "Some polish still trails Notion"
       ],
       "date_added": "2026-11-14",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Personal plan is $0.",
+        "It is capped at 100 MB of storage and 7 MB per upload.",
+        "It includes one form and one chart.",
+        "AI is included only as a limited trial on this plan."
+      ],
+      "overage": "Past the storage, upload and form limits, a Pro workspace is $12 per month billed annually ($144/year) or $16 billed monthly.",
+      "setup_notes": "Download the desktop or mobile app, or use AppFlowy Cloud; self-hosting the AGPL core is also possible with your own infrastructure.",
+      "faq": [
+        {
+          "question": "What are the Personal plan limits?",
+          "answer": "100 MB of storage, 7 MB per upload, one form and one chart, with AI as a limited trial."
+        },
+        {
+          "question": "What happens if I cancel a paid plan?",
+          "answer": "The workspace moves to the Personal plan and usage above the free limits may be restricted."
+        }
+      ]
     },
     {
       "id": "scram",
@@ -1930,7 +2819,24 @@
         "Fair-use limits can throttle very heavy AI usage"
       ],
       "date_added": "2026-11-15",
-      "scope_caveat": "Scope note: building and previewing apps is free with no card, but publishing costs $9 per app per month. This is a free prototyping environment, not free hosting."
+      "scope_caveat": "Scope note: building and previewing apps is free with no card, but publishing costs $9 per app per month. This is a free prototyping environment, not free hosting.",
+      "free_tier_limits": [
+        "Building is $0, with no card, no AI credits and no daily limits.",
+        "The free side covers unlimited apps and preview links for real people.",
+        "Publishing is what costs: $9 per app per month."
+      ],
+      "overage": "There is no quota to exceed while building; going live moves the app onto the $9 per app, per month plan.",
+      "setup_notes": "Build in the browser and share preview links; no local install and no card until you publish.",
+      "faq": [
+        {
+          "question": "What is free in Scram?",
+          "answer": "Building: unlimited apps and preview links, with no AI credits and no daily limits, at $0 for as long as you need."
+        },
+        {
+          "question": "When do I start paying?",
+          "answer": "When an app goes live to real users, at $9 per app per month."
+        }
+      ]
     },
     {
       "id": "design-arena",
@@ -1966,7 +2872,24 @@
         "Outputs are public and licensed back to Arcada Labs"
       ],
       "date_added": "2026-11-15",
-      "scope_caveat": "Scope note: Design Arena is a model-comparison benchmark, not a tool you build in. It is listed because it helps you choose a model before paying for one — it cannot export code, host a project or hand work off."
+      "scope_caveat": "Scope note: Design Arena is a model-comparison benchmark, not a tool you build in. It is listed because it helps you choose a model before paying for one — it cannot export code, host a project or hand work off.",
+      "free_tier_limits": [
+        "The service is free to use, with no card and no pricing page.",
+        "The terms state no fees for using the service.",
+        "The vendor publishes no usage numbers, so no allowance can be quoted."
+      ],
+      "overage": "There is no paid tier published to move to, so there is no overage path to buy.",
+      "setup_notes": "Use it in the browser with an account; there is nothing to install.",
+      "faq": [
+        {
+          "question": "Is Design Arena free?",
+          "answer": "Yes — the terms state no fees for using the service and there is no pricing page; no usage figures are published."
+        },
+        {
+          "question": "How much can I generate?",
+          "answer": "Design Arena publishes no usage allowance, so the practical limit is not documented anywhere on the site."
+        }
+      ]
     },
     {
       "id": "klaviyo",
@@ -2003,7 +2926,24 @@
         "Email support only for the first 60 days; paid email starts at $20/month"
       ],
       "date_added": "2026-11-15",
-      "scope_caveat": "Scope note: Klaviyo is an email and SMS marketing platform, and its free Composer AI is one small part of the free plan. It is listed for AI-assisted flows and copy, not as a general-purpose AI tool or model."
+      "scope_caveat": "Scope note: Klaviyo is an email and SMS marketing platform, and its free Composer AI is one small part of the free plan. It is listed for AI-assisted flows and copy, not as a general-purpose AI tool or model.",
+      "free_tier_limits": [
+        "The free plan is permanent, not a trial, and needs no card.",
+        "It includes 250 active profiles and 500 emails a month.",
+        "It also includes $5 of mobile messages and $5 of Composer AI usage."
+      ],
+      "overage": "Sending past the monthly email allowance or the $5 message and AI credits moves you to a paid plan rather than an automatic charge.",
+      "setup_notes": "Sign up in the browser, connect a store or import contacts, then build a campaign or flow; nothing is installed.",
+      "faq": [
+        {
+          "question": "Is Klaviyo’s free plan a trial?",
+          "answer": "No — the vendor describes it as permanent: 250 active profiles and 500 emails a month, with no card."
+        },
+        {
+          "question": "What are the $5 allowances?",
+          "answer": "The free plan includes $5 of mobile messages and $5 of Composer AI usage alongside the email allowance."
+        }
+      ]
     },
     {
       "id": "workshop-ai",
@@ -2042,7 +2982,24 @@
         "No refunds on paid plans and unused credits are forfeited"
       ],
       "date_added": "2026-11-16",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Discover plan is $0 and requires no credit card.",
+        "It includes 250 AI credits.",
+        "Free-plan app data is retained for only 10 days."
+      ],
+      "overage": "The free credit allowance is finite; past it, the paid Pro and Team plans carry the higher allowances.",
+      "setup_notes": "Browser-based app building — sign up, describe the app and connect the data sources you need; no local install.",
+      "faq": [
+        {
+          "question": "How many credits does the free plan include?",
+          "answer": "The Discover plan lists 250 AI credits at $0, with no card required."
+        },
+        {
+          "question": "How long is my data kept on the free plan?",
+          "answer": "Free-plan app data is kept for 10 days, so it suits trials and demos rather than production."
+        }
+      ]
     },
     {
       "id": "opencode",
@@ -2083,7 +3040,24 @@
         "Optional paid gateway costs $10/month and up"
       ],
       "date_added": "2026-11-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The client is MIT-licensed and free to run with your own keys or local models.",
+        "Free models are offered through the vendor’s gateway, but no daily cap is published for them.",
+        "Signed out, the built-in provider is absent until you connect an OpenCode Console account or set an API key."
+      ],
+      "overage": "The dependable free path is your own compute or key; the vendor’s curated model subscription starts at $10/month.",
+      "setup_notes": "Install the CLI, then configure providers in opencode.jsonc — or sign in to the vendor’s Console to use the hosted models.",
+      "faq": [
+        {
+          "question": "Can I use OpenCode for free?",
+          "answer": "Yes, with your own model keys or a local runtime; the vendor also offers free models through its gateway without a published cap."
+        },
+        {
+          "question": "Do I need an account?",
+          "answer": "Not for the open-source client — but the vendor’s paid models require a Console account or an API key."
+        }
+      ]
     },
     {
       "id": "cline",
@@ -2122,7 +3096,24 @@
         "A $9.99/month pass is needed for higher rate limits"
       ],
       "date_added": "2026-11-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The extension is Apache-2.0 and free with your own key or a local runtime.",
+        "Free model promotions run on a rotating, limited-time basis and carry an unpublished quota.",
+        "Creating an account gives access to frontier models through the extension."
+      ],
+      "overage": "Because the promotions rotate, the dependable free path is your own credentials; otherwise usage is billed through your provider or the vendor’s credits.",
+      "setup_notes": "Install from the VS Code or JetBrains marketplace, then sign in or paste your own API key and pick a model.",
+      "faq": [
+        {
+          "question": "Is Cline free?",
+          "answer": "The extension is Apache-2.0 and free; model usage is billed by your provider, or free locally, and occasional free-model promotions add a limited quota."
+        },
+        {
+          "question": "Why did my free model stop working?",
+          "answer": "The vendor describes free model promotions as rotating and limited-time, so they expire rather than reset on a schedule."
+        }
+      ]
     },
     {
       "id": "kilo-code",
@@ -2161,7 +3152,25 @@
         "Teams plan is $15 per user per month"
       ],
       "date_added": "2026-11-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The VS Code extension, JetBrains plugin and CLI are MIT-licensed.",
+        "The platform plan is free for individuals, and Kilo provides free models for coding tasks through its gateway and partner providers.",
+        "Auto Free (`kilo-auto/free`) is listed as the easiest starting route.",
+        "No numeric allowance is published for the free routing."
+      ],
+      "overage": "Paid usage comes from your own provider account or the Teams and Enterprise plans; autocomplete through a provider such as Mistral draws on that account’s limits.",
+      "setup_notes": "Install the extension, plugin or desktop app, then choose Auto Free or connect your own provider account.",
+      "faq": [
+        {
+          "question": "Is Kilo Code free?",
+          "answer": "The clients are MIT and the platform plan is free for individuals; free models are offered through Kilo’s gateway without a published allowance."
+        },
+        {
+          "question": "How do I avoid charges?",
+          "answer": "The vendor’s advice is to choose free models where available and keep autocomplete inside your provider’s free allowance, or disable it."
+        }
+      ]
     },
     {
       "id": "qwen-code",
@@ -2199,7 +3208,24 @@
         "Tuned for Qwen models, so other providers need extra setup"
       ],
       "date_added": "2026-11-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The CLI is Apache-2.0 and free software, and it works with your own key, OpenRouter, Fireworks or a local model.",
+        "The Qwen OAuth free tier was discontinued on 15 April 2026, so there is no vendor-funded free service.",
+        "Alibaba Cloud offers subscription plans — a Coding Plan with a weekly quota, or a Token Plan with a monthly credit quota."
+      ],
+      "overage": "There is no free allowance to exhaust: usage is billed by the provider you choose, or by an Alibaba Cloud subscription plan.",
+      "setup_notes": "Install the CLI, then pick a provider — a Qwen account with a subscription, a standard API key, or a local model through Ollama or vLLM.",
+      "faq": [
+        {
+          "question": "Is Qwen Code still free to use?",
+          "answer": "The software is Apache-2.0 and free, but the Qwen OAuth free tier ended on 15 April 2026 — you now supply your own key or subscription."
+        },
+        {
+          "question": "What can I connect it to?",
+          "answer": "It speaks OpenAI, Anthropic, Gemini and Qwen APIs, and also runs against third-party providers or local models such as Ollama and vLLM."
+        }
+      ]
     },
     {
       "id": "mistral-vibe",
@@ -2239,7 +3265,25 @@
         "Rebranded from Le Chat, so older guides point at the old name"
       ],
       "date_added": "2026-11-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Free plan is $0 and needs no card.",
+        "It covers chat, search and image editing with limited messages and web searches.",
+        "Coding sessions are included but limited, and Mistral publishes no message or session numbers.",
+        "Students at accredited institutions can get a free plan valid for up to 12 months if they have not used Vibe or Le Chat before."
+      ],
+      "overage": "The Pro plan is $14.99/month for all-day coding and long-running tasks, subject to fair usage limits.",
+      "setup_notes": "Install the CLI, then sign in with a Mistral account or an API key; if the command is not found in a new terminal, run `uv tool update-shell`.",
+      "faq": [
+        {
+          "question": "What does the free plan include?",
+          "answer": "Chat, search and image editing, plus limited coding sessions — with limited messages and web searches and no published numbers."
+        },
+        {
+          "question": "How much is the paid plan?",
+          "answer": "Pro is $14.99/month, subject to fair usage limits and Mistral’s terms."
+        }
+      ]
     },
     {
       "id": "kimi",
@@ -2278,7 +3322,25 @@
         "Only 1 concurrent agent task and 2 scheduled tasks"
       ],
       "date_added": "2026-11-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Free plan is $0 with no card.",
+        "It states 2 projects with 500 MB of project storage.",
+        "It allows 1 concurrent agent task and 2 scheduled tasks.",
+        "Kimi Code is excluded from the free plan."
+      ],
+      "overage": "Past the free project and concurrency limits, the paid tiers carry more; Kimi Code needs one of them.",
+      "setup_notes": "Browser and app use with an account; the agent features run in the vendor’s cloud, so nothing is installed.",
+      "faq": [
+        {
+          "question": "What does the free plan include?",
+          "answer": "2 projects with 500 MB of storage, 1 concurrent agent task and 2 scheduled tasks, at $0 with no card."
+        },
+        {
+          "question": "Can I use Kimi Code for free?",
+          "answer": "No — the vendor excludes Kimi Code from the free plan."
+        }
+      ]
     },
     {
       "id": "hugging-face-spaces",
@@ -2316,7 +3378,25 @@
         "Dev mode and SSH access require a PRO plan"
       ],
       "date_added": "2026-11-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Static Spaces are free for everyone.",
+        "Free personal accounts in good standing can host up to 2 Spaces running on ZeroGPU.",
+        "ZeroGPU gives free accounts 5 minutes a day of GPU time (2 minutes unauthenticated).",
+        "Each Space environment is limited to 16GB RAM, 2 CPU cores and 50GB of non-persistent disk."
+      ],
+      "overage": "Gradio and Docker Spaces need a paid plan to create — PRO for personal accounts, Team or Enterprise for organisations.",
+      "setup_notes": "Push a Space from the Hub; static Spaces need no compute, while GPU-backed ones draw on the daily ZeroGPU allowance.",
+      "faq": [
+        {
+          "question": "Can I host a GPU demo for free?",
+          "answer": "Free accounts can host up to 2 Spaces on ZeroGPU, with 5 minutes of GPU time a day (2 minutes when unauthenticated)."
+        },
+        {
+          "question": "Why can’t I create a Gradio Space?",
+          "answer": "Gradio and Docker Spaces run on compute and require a paid plan to create; static Spaces stay free."
+        }
+      ]
     },
     {
       "id": "jan",
@@ -2355,7 +3435,24 @@
         "Desktop only, with no hosted web version"
       ],
       "date_added": "2026-11-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Apache-2.0 desktop app with no account, no paid tier and no metering.",
+        "It runs 100% offline on your own computer.",
+        "Any cost comes from hardware, or from cloud model keys you choose to add."
+      ],
+      "overage": "No paid tier and no metering, so there is nothing to run over.",
+      "setup_notes": "Download the build for your platform and pull a model; everything runs locally with no sign-in.",
+      "faq": [
+        {
+          "question": "Is Jan free?",
+          "answer": "Yes — it is Apache-2.0 with no account, no paid tier and no metering."
+        },
+        {
+          "question": "Does it need internet?",
+          "answer": "No — Jan runs models entirely offline on your own machine."
+        }
+      ]
     },
     {
       "id": "gpt4all",
@@ -2394,7 +3491,24 @@
         "No hosted fallback if your machine is weak"
       ],
       "date_added": "2026-11-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "MIT-licensed app with direct downloads: no account, no card, no paid tier.",
+        "Local inference is unmetered, and the vendor publishes no cap.",
+        "Models run on your own device, so there is no per-message charge."
+      ],
+      "overage": "Nothing to exceed: local inference is unmetered and there is no paid tier to buy.",
+      "setup_notes": "Download the installer for your platform and pick a model; everything runs locally.",
+      "faq": [
+        {
+          "question": "Is GPT4All free?",
+          "answer": "Yes — the app is MIT-licensed, needs no account or card, and local inference is unmetered."
+        },
+        {
+          "question": "Can I use it commercially?",
+          "answer": "The project is open-source and available for commercial use, per the vendor’s repository."
+        }
+      ]
     },
     {
       "id": "otter-ai",
@@ -2433,7 +3547,25 @@
         "Only the 25 most recent conversations stay open; older ones are archived"
       ],
       "date_added": "2026-11-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "The Basic plan is free forever and needs no card.",
+        "It gives 300 transcription minutes a month, with 30 minutes per conversation.",
+        "File imports are limited to three over the lifetime of the account.",
+        "The 25 most recent conversations stay available."
+      ],
+      "overage": "Past the monthly minutes, Pro is $8.33 per user per month, billed annually.",
+      "setup_notes": "Sign in and connect a calendar or upload audio; the web app and mobile apps do the transcription, so nothing is installed.",
+      "faq": [
+        {
+          "question": "How many minutes does the free plan transcribe?",
+          "answer": "300 minutes a month, with a 30-minute cap per conversation."
+        },
+        {
+          "question": "How many files can I import for free?",
+          "answer": "Three lifetime file imports on the Basic plan."
+        }
+      ]
     },
     {
       "id": "fathom-ai",
@@ -2470,7 +3602,24 @@
         "Bot-free capture is a Mac beta; other platforms use the meeting bot"
       ],
       "date_added": "2026-11-18",
-      "scope_caveat": null
+      "scope_caveat": null,
+      "free_tier_limits": [
+        "Free is $0 and needs no card.",
+        "The vendor publishes no cap on recordings, transcripts, storage or downloads.",
+        "The limits sit on the AI layer: advanced summaries cover the first five calls each month, and AI action items are limited."
+      ],
+      "overage": "The constraints are the per-month AI allowances rather than minutes; the paid plans start at $15/month.",
+      "setup_notes": "Sign up and connect your meeting platform; Fathom joins the call or captures it bot-free, so nothing is installed.",
+      "faq": [
+        {
+          "question": "Is there a limit on recordings?",
+          "answer": "The vendor publishes no cap on recordings, transcripts, storage or downloads — the limits are on the AI features."
+        },
+        {
+          "question": "What is capped on the free plan?",
+          "answer": "Advanced summaries for the first five calls each month, and limited AI action items."
+        }
+      ]
     }
   ]
 }
